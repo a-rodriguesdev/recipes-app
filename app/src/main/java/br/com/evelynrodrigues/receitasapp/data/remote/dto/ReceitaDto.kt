@@ -1,4 +1,8 @@
 package br.com.evelynrodrigues.receitasapp.data.remote.dto
 
-class ReceitaDto {
-}
+data class ReceitaDto (
+    val id: Int,
+    val title: String,
+    val description: String,
+    val url: String
+)

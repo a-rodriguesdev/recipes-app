@@ -54,10 +54,11 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
-    // Dependências do Room
-    implementation("androidx.room:room-runtime:2.6.1")
-    implementation("androidx.room:room-ktx:2.6.1")
-    ksp("androidx.room:room-compiler:2.6.1")
+    // Dependências do Room (2.8.x compatível com Kotlin 2.0 / KSP 2)
+    val roomVersion = "2.8.4"
+    implementation("androidx.room:room-runtime:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
+    ksp("androidx.room:room-compiler:$roomVersion")
 
     // Dependências do Retrofit
     implementation("com.squareup.retrofit2:retrofit:3.0.0")

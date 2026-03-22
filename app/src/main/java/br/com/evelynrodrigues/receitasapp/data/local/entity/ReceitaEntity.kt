@@ -1,4 +1,12 @@
 package br.com.evelynrodrigues.receitasapp.data.local.entity
 
-class ReceitaEntity {
-}
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "receitas")
+data class ReceitaEntity (
+    @PrimaryKey val id: Int,
+    val title: String,
+    val description: String,
+    val url: String
+)
